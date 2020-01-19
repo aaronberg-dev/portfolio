@@ -4,7 +4,7 @@
       <v-col align-self="end" class="text-right pa-5">
         <div class="text-uppercase display-3">Aaron Berg</div>
         <div class="display-4 text-uppercase green--text">
-          Front-end Developer
+          Portfolio
         </div>
       </v-col>
     </v-row>

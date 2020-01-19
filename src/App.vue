@@ -1,20 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" light>
-      <div class="d-flex align-center">
-        <div class="font-weight-black display-2">AB</div>
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn color="black" class="mr-3" target="_blank" icon>
-        <v-icon class="display-1">mdi-github-circle</v-icon>
-      </v-btn>
-      <v-btn color="black" class="mr-3" target="_blank" icon>
-        <v-icon class="display-1">mdi-linkedin-box</v-icon>
-      </v-btn>
-    </v-app-bar>
-
+    <NavDrawer />
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -22,14 +8,16 @@
 </template>
 
 <script>
+import NavDrawer from '@/components/NavDrawer.vue'
+
 export default {
   name: 'App',
-
-  components: {},
-
-  data: () => ({
-    //
-  })
+  components: {
+    NavDrawer
+  },
+  data() {
+    return {}
+  }
 }
 </script>
 <style lang="scss"></style>
