@@ -22,6 +22,8 @@
             text
             icon
             :href="href"
+            target="_blank"
+            rel="noopener"
             :title="title"
             class="mx-2"
           >

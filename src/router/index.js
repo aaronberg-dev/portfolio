@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
+const parseProps = (r) => ({ id: r.params.id })
+
 const routes = [
   {
     path: '/',
@@ -31,7 +33,8 @@ const routes = [
     component: () => import('../views/Portfolio.vue')
   },
   {
-    path: '/details',
+    path: '/details/:id',
+    props: parseProps,
     name: 'details',
     component: () => import('../views/Details.vue')
   }

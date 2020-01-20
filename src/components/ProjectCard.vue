@@ -1,12 +1,18 @@
 <template>
   <v-row>
     <v-col
-      v-for="({ name, desc, tags, live, details }, i) in projects"
+      v-for="({ name, desc, tags, live, details, preview }, i) in projects"
       :key="i"
-      md="6"
+      md="4"
+      xl="3"
     >
-      <v-card color="grey" class="darken-4">
-        <v-card-title>
+      <v-card color="grey" class="darken-4 preview-card mb-5" elevation="15">
+        <v-img
+          class="preview-img"
+          height="250"
+          :src="require(`../assets/${preview}`)"
+        ></v-img>
+        <v-card-title style="border-top: 4px solid white">
           {{ name }}
         </v-card-title>
 
@@ -32,7 +38,7 @@
                 color="deep-purple"
                 v-on="on"
                 tile
-                flat
+                dark
                 :to="`/details/${details}`"
               >
                 <v-icon>mdi-text</v-icon>
@@ -48,7 +54,7 @@
                 color="deep-purple"
                 v-on="on"
                 tile
-                flat
+                dark
                 :to="live"
               >
                 <v-icon>mdi-laptop</v-icon>
@@ -63,46 +69,32 @@
 </template>
 
 <script>
+import gsap from 'gsap'
+import projects from '../shared/projects'
+import all_tags from '../shared/all_tags'
+
 export default {
   name: 'project-card',
   data() {
     return {
-      all_tags: {
-        vue: 'vuejs',
-        vuetify: 'vuetify',
-        bootstrap: 'bootstrap',
-        react: 'react',
-        jquery: 'jquery'
-      },
-      projects: [
-        {
-          name: 'Store',
-          desc:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque veniam culpa quas ipsam officia adipisci',
-          tags: ['vue', 'vuetify'],
-          live: '/Store',
-          details: 'store'
-        },
-        {
-          name: 'Event Registration',
-          desc:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque veniam culpa quas ipsam officia adipisci',
-          tags: ['vue', 'bootstrap'],
-          live: '/Store',
-          details: 'event-registration'
-        },
-        {
-          name: 'Banner Manager',
-          desc:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque veniam culpa quas ipsam officia adipisci',
-          tags: ['bootstrap', 'jquery'],
-          live: '/banner_manager.html',
-          details: 'banner-manager'
-        }
-      ]
+      all_tags: all_tags,
+      projects: projects
     }
+  },
+  mounted() {
+    gsap.from('.preview-card', {
+      duration: 0.5,
+      opacity: 0,
+      scale: 0,
+      y: 200,
+      ease: 'power1'
+    })
   }
 }
 </script>
 
-<style></style>
+<style>
+.preview-card .v-image__image {
+  background-position: top !important;
+}
+</style>
