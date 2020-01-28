@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid fill-height>
-    <v-row class="fill-height">
+  <v-container fluid>
+    <v-row>
       <v-col cols="12" md="6">
         <v-card height="100%">
           <v-card-title class="display-2 mb-5">{{
@@ -38,13 +38,7 @@
         </v-card>
       </v-col>
       <v-col cols="auto" md="6" class="project-slides">
-        <v-carousel
-          continueous
-          cycle
-          height="100%"
-          style="max-height:calc(100vh - 50px)"
-          show-arrows
-        >
+        <v-carousel continueous cycle height="500px" show-arrows>
           <v-carousel-item
             v-for="(img, i) in curr_project.carousel"
             :key="i"

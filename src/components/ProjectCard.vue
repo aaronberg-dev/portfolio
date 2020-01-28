@@ -6,7 +6,12 @@
       md="4"
       xl="3"
     >
-      <v-card color="grey" class="darken-4 preview-card mb-5" elevation="15">
+      <v-card
+        color="grey"
+        class="darken-4 preview-card mb-5"
+        elevation="15"
+        height="100%"
+      >
         <v-img
           class="preview-img"
           height="250"

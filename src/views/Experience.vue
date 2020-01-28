@@ -17,7 +17,7 @@
                   :src="require(`../assets/tech-icons/${icon}.svg`)"
                   contain
                   class="mb-3"
-                  height="70"
+                  height="50"
                 >
                 </v-img>
                 <div class="icon-name text-capitalize">{{ icon }}</div>
@@ -44,7 +44,7 @@
                   :src="require(`../assets/tech-icons/${icon}.svg`)"
                   contain
                   class="mb-3"
-                  height="70"
+                  height="50"
                 >
                 </v-img>
                 <div class="icon-name text-capitalize">{{ icon }}</div>
@@ -78,10 +78,8 @@ export default {
         'jquery',
         'less',
         'npm',
-        'react',
         'sass',
-        'vue',
-        'vuetifyjs'
+        'vue'
       ],
       other_icons: [
         'bulma',
@@ -89,8 +87,10 @@ export default {
         'gsap',
         'pug',
         'python',
+        'react',
         'tailwindcss',
-        'webpack'
+        'webpack',
+        'vuetifyjs'
       ]
     }
   },

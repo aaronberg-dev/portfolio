@@ -8,13 +8,18 @@ export default [
     details: 'store',
     task:
       'To come up with a new look and feel for a smaller version of our retail store that would just handle certain cities',
-    carousel: ['store_preview.png', 'store_preview.png', 'store_preview.png']
+    carousel: [
+      'store_layout.png',
+      'store_preview.png',
+      'store_billing.png',
+      'store_cart.png'
+    ]
   },
   {
     name: 'Event Registration',
     desc: 'Event registration form to purchase tickets for events',
     tags: ['vue', 'bootstrap', 'sass'],
-    preview: 'event_preview.png',
+    preview: 'event_register.png',
     live: '/registration',
     details: 'registration',
     task:
@@ -23,8 +28,7 @@ export default [
   },
   {
     name: 'Banner Manager',
-    desc:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque veniam culpa quas ipsam officia adipisci',
+    desc: 'UI to manage market specific ad banners.',
     tags: ['bootstrap', 'jquery', 'sass'],
     preview: 'banner_manager_preview.png',
     live: '/banner_manager.html',
@@ -34,25 +38,24 @@ export default [
   },
   {
     name: 'Commissions Dashboard',
-    desc:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque veniam culpa quas ipsam officia adipisci',
+    desc: 'Dashboard to display current and past commission breakdowns.',
     tags: ['bootstrap', 'jquery', 'sass'],
-    preview: 'commission_preview.png',
+    preview: 'dashboard_home.png',
     live: '/dashboard.html',
     details: 'dashboard',
     task: 'TBA',
     carousel: [
       'dashboard_home.png',
       'dashboard_inits.png',
-      'dashboard_fast.png'
+      'dashboard_team.png'
     ]
   },
   {
     name: 'Zija Replicated Site',
     desc:
-      "Brand message for company that keeps distributor's ID attached for new enrollments",
+      'Shareable company website that gives distributor credit for enrollment.',
     tags: ['bootstrap', 'jquery', 'sass'],
-    preview: 'repsite_preview.png',
+    preview: 'repsite_home.png',
     live: '/repsite',
     details: 'replicated-site',
     task: 'TBA',
